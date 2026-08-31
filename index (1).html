@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Sim 1.7</title>
+</head>
+<body>
+<main class="game">
+  <div class="topbar">
+
+  <div class="brand">
+    <h1>Café Sim 1.7</h1>
+  </div>
+
+  <div class="day-info">
+    <span id="dayLabel">Day 1</span>
+  </div>
+
+  <div class="money-info">
+    <span id="moneyLabel">$0.00</span>
+  </div>
+
+  <div class="brand-info">
+    <button id="infoBtn" class="icon-btn">i</button>
+  </div>
+
+  <div class="time-info">
+    <span id="timeLabel">08:00</span>
+  </div>
+
+  <div class="rent-info">
+      <small>Monthly rent</small>
+  </div>
+
+</div>
+
+  <section class="month-bar">
+    <span id="rentLabel">$0.00 / $500.00</span>
+    <div class="progress"><div id="rentProgress"></div></div>
+  </section>
+
+  <section id="customerSlots" class="customerSlots"></section>
+
+  <section class="current-action">
+    <div id="currentActionText">Choose an action.</div>
+    <div id="actionProgress" class="action-progress hidden">
+      <div id="actionProgressFill"></div>
+    </div>
+    <div id="actionTime" class="action-time"></div>
+  </section>
+
+  <section id="actions" class="actions"></section>
+
+  <div class="resource-bar">
+     <button id="endDayBtn" class="end-day-btn">End day</button>
+    <button id="debug30Btn" class="end-day-btn">Wait</button>
+  </div>
+</main>
+  
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <button id="modalClose" class="modal-close">×</button>
+    <h2 id="modalTitle"></h2>
+    <div id="modalBody"></div>
+    <div id="modalActions" class="modal-actions"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

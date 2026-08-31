@@ -1,0 +1,1433 @@
+{
+  "config": {
+    "openingTime": "08:00",
+    "closingTime": "18:00",
+    "arrivalShift": 30,
+    "maxSeats": 5,
+    "startMoney": 100,
+    "cupcakesPerDay": 5,
+    "cupcakeCost": 1,
+    "cupcakeProductId": 4,
+    "cupcakeSatisfation": 8,
+    "dailyBills": 25,
+    "monthlyRent": 500,
+    "daysPerMonth": 30,
+    "maxOrders": 2,
+    "secondOrderMinSatisfaction": 50
+  },
+
+  "products": {
+    "1": {
+      "id": 1,
+      "name": "coffee",
+      "price": 3,
+      "prepTime": 3
+    },
+    "2": {
+      "id": 2,
+      "name": "sandwich",
+      "price": 7,
+      "prepTime": 8
+    },
+    "3": {
+      "id": 3,
+      "name": "cocktail",
+      "price": 9,
+      "prepTime": 6
+    },
+    "4": {
+      "id": 4,
+      "name": "cupcake",
+      "price": 1,
+      "prepTime": 0
+    }
+  },
+
+  "actions": {
+    "chat": {
+      "id": 1,
+      "time": 5
+    },
+    "tableChat": {
+      "id": 2,
+      "time": 10
+    },
+    "clean": {
+      "id": 3,
+      "time": 3
+    },
+    "order": {
+      "id": 4,
+      "time": 0
+    },
+    "cupcake": {
+      "id": 5,
+      "time": 0
+    }
+  },
+
+  "nameStyles": {
+    "friendly": 1,
+    "formal": 2,
+    "formalPrefix": "Mr."
+  },
+
+  "ageGroups": {
+    "young": {
+      "max": 29,
+      "label": "young"
+    },
+    "adult": {
+      "max": 59,
+      "label": "adult"
+    },
+    "elderly": {
+      "max": 200,
+      "label": "elderly"
+    }
+  },
+
+  "patienceLevels": [
+    {
+      "max": 39,
+      "label": "impatient"
+    },
+    {
+      "max": 69,
+      "label": "chilled"
+    },
+    {
+      "max": 200,
+      "label": "calm"
+    }
+  ],
+
+  "tipLevels": [
+    {
+      "max": 6,
+      "label": "low tips"
+    },
+    {
+      "max": 12,
+      "label": "medium tips"
+    },
+    {
+      "max": 200,
+      "label": "high tips"
+    }
+  ],
+
+  "friendship": {
+    "name": 1,
+    "likes": 2,
+    "class": 3,
+    "surname": 4,
+    "age": 5,
+    "patience": 6,
+    "fullLikes": 7,
+    "tips": 8,
+    "info": 9,
+    "maxLevel": 9
+  },
+
+  "classes": {
+    "1": {
+      "id": 1,
+      "name": "Student",
+      "nameStyle": 1,
+      "secondOrderChance": 0.65,
+      "secondOrderProduct": 1,
+      "served_in_time": 8,
+      "single_chat_bonus": 10,
+      "group_chat_bonus": 2
+    },
+    "2": {
+      "id": 2,
+      "name": "Banker",
+      "nameStyle": 2,
+      "secondOrderChance": 0.40,
+      "secondOrderProduct": 3,
+      "served_in_time": 18,
+      "single_chat_bonus": 10,
+      "group_chat_bonus": 5
+    },
+    "3": {
+      "id": 3,
+      "name": "Commuter",
+      "nameStyle": 2,
+      "secondOrderChance": 0,
+      "secondOrderProduct": 1,
+      "served_in_time": 25,
+      "single_chat_bonus": -1,
+      "group_chat_bonus": 1
+    },
+    "4": {
+      "id": 4,
+      "name": "Freelancer",
+      "nameStyle": 1,
+      "secondOrderChance": 0.50,
+      "secondOrderProduct": 1,
+      "served_in_time": 10,
+      "single_chat_bonus": 7,
+      "group_chat_bonus": 5
+    },
+    "5": {
+      "id": 5,
+      "name": "Retiree",
+      "nameStyle": 1,
+      "secondOrderChance": 0.45,
+      "secondOrderProduct": 1,
+      "served_in_time": 8,
+      "single_chat_bonus": 15,
+      "group_chat_bonus": 7
+    },
+    "6": {
+      "id": 6,
+      "name": "Tourist",
+      "nameStyle": 1,
+      "secondOrderChance": 0.20,
+      "secondOrderProduct": 3,
+      "served_in_time": 15,
+      "single_chat_bonus": 15,
+      "group_chat_bonus": 0
+    }
+  },
+
+  "customers": [
+  {
+    "id": "customer_001",
+    "name": "Francesco",
+    "surname": "Conti",
+    "classId": 1,
+    "age": 26,
+    "likes": [
+      1,
+      4
+    ],
+    "patience": 77,
+    "tip": 8,
+    "eta": [
+      {
+        "day": 2,
+        "time": "17:51"
+      }
+    ],
+    "info": "Usually comes here after classes."
+  },
+  {
+    "id": "customer_002",
+    "name": "Elena",
+    "surname": "Marino",
+    "classId": 3,
+    "age": 40,
+    "likes": [
+      1,
+      2
+    ],
+    "patience": 29,
+    "tip": 10,
+    "eta": [
+      {
+        "day": 5,
+        "time": "08:41"
+      }
+    ],
+    "info": "Usually stops here on the way to work."
+  },
+  {
+    "id": "customer_003",
+    "name": "Francesco",
+    "surname": "Marino",
+    "classId": 1,
+    "age": 27,
+    "likes": [
+      1
+    ],
+    "patience": 84,
+    "tip": 4,
+    "eta": [
+      {
+        "day": 1,
+        "time": "13:19"
+      },
+      {
+        "day": 2,
+        "time": "09:43"
+      },
+      {
+        "day": 3,
+        "time": "17:40"
+      }
+    ],
+    "info": "Likes having a quiet place to study."
+  },
+  {
+    "id": "customer_004",
+    "name": "Sara",
+    "surname": "Ferri",
+    "classId": 1,
+    "age": 27,
+    "likes": [
+      1,
+      2,
+      4
+    ],
+    "patience": 78,
+    "tip": 5,
+    "eta": [
+      {
+        "day": 3,
+        "time": "12:51"
+      },
+      {
+        "day": 7,
+        "time": "10:49"
+      }
+    ],
+    "info": "Usually comes here after classes."
+  },
+  {
+    "id": "customer_005",
+    "name": "Anna",
+    "surname": "Ferri",
+    "classId": 3,
+    "age": 38,
+    "likes": [
+      1
+    ],
+    "patience": 40,
+    "tip": 5,
+    "eta": [
+      {
+        "day": 3,
+        "time": "13:45"
+      }
+    ],
+    "info": "Works outside the city and is usually in a hurry."
+  },
+  {
+    "id": "customer_006",
+    "name": "Sara",
+    "surname": "Ferri",
+    "classId": 3,
+    "age": 25,
+    "likes": [
+      1
+    ],
+    "patience": 32,
+    "tip": 12,
+    "eta": [
+      {
+        "day": 4,
+        "time": "16:32"
+      },
+      {
+        "day": 5,
+        "time": "12:43"
+      }
+    ],
+    "info": "Has very little free time in the morning."
+  },
+  {
+    "id": "customer_007",
+    "name": "Giovanni",
+    "surname": "Bianchi",
+    "classId": 1,
+    "age": 23,
+    "likes": [
+      1
+    ],
+    "patience": 91,
+    "tip": 5,
+    "eta": [
+      {
+        "day": 4,
+        "time": "16:15"
+      },
+      {
+        "day": 5,
+        "time": "17:48"
+      }
+    ],
+    "info": "Studies and often stays at the counter."
+  },
+  {
+    "id": "customer_008",
+    "name": "Luca",
+    "surname": "Bianchi",
+    "classId": 2,
+    "age": 44,
+    "likes": [
+      1,
+      3
+    ],
+    "patience": 73,
+    "tip": 16,
+    "eta": [
+      {
+        "day": 4,
+        "time": "17:08"
+      },
+      {
+        "day": 7,
+        "time": "17:07"
+      }
+    ],
+    "info": "Works in finance and often takes a short break here."
+  },
+  {
+    "id": "customer_009",
+    "name": "Luca",
+    "surname": "Verdi",
+    "classId": 5,
+    "age": 64,
+    "likes": [
+      1
+    ],
+    "patience": 82,
+    "tip": 6,
+    "eta": [
+      {
+        "day": 7,
+        "time": "17:48"
+      }
+    ],
+    "info": "Enjoys chatting with familiar people."
+  },
+  {
+    "id": "customer_010",
+    "name": "Alessandro",
+    "surname": "Marino",
+    "classId": 3,
+    "age": 51,
+    "likes": [
+      1
+    ],
+    "patience": 29,
+    "tip": 13,
+    "eta": [
+      {
+        "day": 2,
+        "time": "17:50"
+      },
+      {
+        "day": 5,
+        "time": "17:56"
+      }
+    ],
+    "info": "Has very little free time in the morning."
+  },
+  {
+    "id": "customer_011",
+    "name": "Alessandro",
+    "surname": "Ferri",
+    "classId": 2,
+    "age": 48,
+    "likes": [
+      2
+    ],
+    "patience": 72,
+    "tip": 19,
+    "eta": [
+      {
+        "day": 1,
+        "time": "17:34"
+      }
+    ],
+    "info": "Often comes here after work."
+  },
+  {
+    "id": "customer_012",
+    "name": "Elena",
+    "surname": "Romano",
+    "classId": 2,
+    "age": 61,
+    "likes": [
+      1,
+      3
+    ],
+    "patience": 58,
+    "tip": 19,
+    "eta": [
+      {
+        "day": 7,
+        "time": "11:01"
+      }
+    ],
+    "info": "Works in finance and often takes a short break here."
+  },
+  {
+    "id": "customer_013",
+    "name": "Alessandro",
+    "surname": "Ferri",
+    "classId": 2,
+    "age": 53,
+    "likes": [
+      3
+    ],
+    "patience": 72,
+    "tip": 10,
+    "eta": [
+      {
+        "day": 6,
+        "time": "17:39"
+      }
+    ],
+    "info": "Works in finance and often takes a short break here."
+  },
+  {
+    "id": "customer_014",
+    "name": "Giulia",
+    "surname": "Esposito",
+    "classId": 2,
+    "age": 54,
+    "likes": [
+      1,
+      3
+    ],
+    "patience": 50,
+    "tip": 17,
+    "eta": [
+      {
+        "day": 5,
+        "time": "17:24"
+      }
+    ],
+    "info": "Often comes here after work."
+  },
+  {
+    "id": "customer_015",
+    "name": "Giovanni",
+    "surname": "Rossi",
+    "classId": 1,
+    "age": 18,
+    "likes": [
+      1,
+      4
+    ],
+    "patience": 93,
+    "tip": 5,
+    "eta": [
+      {
+        "day": 2,
+        "time": "13:01"
+      }
+    ],
+    "info": "Usually comes here after classes."
+  },
+  {
+    "id": "customer_016",
+    "name": "Anna",
+    "surname": "Verdi",
+    "classId": 1,
+    "age": 28,
+    "likes": [
+      1,
+      4
+    ],
+    "patience": 83,
+    "tip": 4,
+    "eta": [
+      {
+        "day": 2,
+        "time": "13:27"
+      },
+      {
+        "day": 4,
+        "time": "16:38"
+      },
+      {
+        "day": 5,
+        "time": "13:10"
+      }
+    ],
+    "info": "Studies and often stays at the counter."
+  },
+  {
+    "id": "customer_017",
+    "name": "Anna",
+    "surname": "Moretti",
+    "classId": 3,
+    "age": 27,
+    "likes": [
+      1
+    ],
+    "patience": 30,
+    "tip": 13,
+    "eta": [
+      {
+        "day": 1,
+        "time": "17:39"
+      },
+      {
+        "day": 6,
+        "time": "17:23"
+      }
+    ],
+    "info": "Works outside the city and is usually in a hurry."
+  },
+  {
+    "id": "customer_018",
+    "name": "Luca",
+    "surname": "Conti",
+    "classId": 1,
+    "age": 19,
+    "likes": [
+      1,
+      4
+    ],
+    "patience": 83,
+    "tip": 9,
+    "eta": [
+      {
+        "day": 1,
+        "time": "17:14"
+      }
+    ],
+    "info": "Usually comes here after classes."
+  },
+  {
+    "id": "customer_019",
+    "name": "Alessandro",
+    "surname": "Marino",
+    "classId": 2,
+    "age": 38,
+    "likes": [
+      3
+    ],
+    "patience": 57,
+    "tip": 16,
+    "eta": [
+      {
+        "day": 2,
+        "time": "17:09"
+      },
+      {
+        "day": 5,
+        "time": "09:03"
+      }
+    ],
+    "info": "Often comes here after work."
+  },
+  {
+    "id": "customer_020",
+    "name": "Giulia",
+    "surname": "Ferri",
+    "classId": 3,
+    "age": 26,
+    "likes": [
+      1
+    ],
+    "patience": 39,
+    "tip": 12,
+    "eta": [
+      {
+        "day": 3,
+        "time": "17:03"
+      },
+      {
+        "day": 5,
+        "time": "17:52"
+      },
+      {
+        "day": 7,
+        "time": "11:06"
+      }
+    ],
+    "info": "Works outside the city and is usually in a hurry."
+  },
+  {
+    "id": "customer_021",
+    "name": "Alessandro",
+    "surname": "Esposito",
+    "classId": 1,
+    "age": 23,
+    "likes": [
+      1
+    ],
+    "patience": 76,
+    "tip": 4,
+    "eta": [
+      {
+        "day": 3,
+        "time": "09:14"
+      }
+    ],
+    "info": "Likes having a quiet place to study."
+  },
+  {
+    "id": "customer_022",
+    "name": "Matteo",
+    "surname": "Esposito",
+    "classId": 3,
+    "age": 42,
+    "likes": [
+      1
+    ],
+    "patience": 45,
+    "tip": 13,
+    "eta": [
+      {
+        "day": 2,
+        "time": "08:27"
+      },
+      {
+        "day": 3,
+        "time": "17:27"
+      },
+      {
+        "day": 4,
+        "time": "16:19"
+      }
+    ],
+    "info": "Works outside the city and is usually in a hurry."
+  },
+  {
+    "id": "customer_023",
+    "name": "Matteo",
+    "surname": "Marino",
+    "classId": 1,
+    "age": 24,
+    "likes": [
+      1
+    ],
+    "patience": 84,
+    "tip": 7,
+    "eta": [
+      {
+        "day": 1,
+        "time": "17:34"
+      },
+      {
+        "day": 4,
+        "time": "17:07"
+      }
+    ],
+    "info": "Studies and often stays at the counter."
+  },
+  {
+    "id": "customer_024",
+    "name": "Anna",
+    "surname": "Ferri",
+    "classId": 1,
+    "age": 20,
+    "likes": [
+      1,
+      4
+    ],
+    "patience": 96,
+    "tip": 5,
+    "eta": [
+      {
+        "day": 2,
+        "time": "09:18"
+      }
+    ],
+    "info": "Usually comes here after classes."
+  },
+  {
+    "id": "customer_025",
+    "name": "Sara",
+    "surname": "Marino",
+    "classId": 5,
+    "age": 77,
+    "likes": [
+      1,
+      2,
+      4
+    ],
+    "patience": 86,
+    "tip": 10,
+    "eta": [
+      {
+        "day": 2,
+        "time": "17:56"
+      }
+    ],
+    "info": "Often comes here to read the newspaper."
+  },
+  {
+    "id": "customer_026",
+    "name": "Luca",
+    "surname": "Esposito",
+    "classId": 3,
+    "age": 54,
+    "likes": [
+      1
+    ],
+    "patience": 45,
+    "tip": 14,
+    "eta": [
+      {
+        "day": 1,
+        "time": "12:05"
+      },
+      {
+        "day": 6,
+        "time": "17:21"
+      }
+    ],
+    "info": "Works outside the city and is usually in a hurry."
+  },
+  {
+    "id": "customer_027",
+    "name": "Elena",
+    "surname": "Gallo",
+    "classId": 3,
+    "age": 52,
+    "likes": [
+      1
+    ],
+    "patience": 42,
+    "tip": 11,
+    "eta": [
+      {
+        "day": 6,
+        "time": "17:44"
+      }
+    ],
+    "info": "Usually stops here on the way to work."
+  },
+  {
+    "id": "customer_028",
+    "name": "Anna",
+    "surname": "Gallo",
+    "classId": 2,
+    "age": 44,
+    "likes": [
+      1
+    ],
+    "patience": 65,
+    "tip": 18,
+    "eta": [
+      {
+        "day": 1,
+        "time": "08:06"
+      }
+    ],
+    "info": "Works in finance and often takes a short break here."
+  },
+  {
+    "id": "customer_029",
+    "name": "Alessandro",
+    "surname": "Bianchi",
+    "classId": 2,
+    "age": 47,
+    "likes": [
+      1,
+      2,
+      3
+    ],
+    "patience": 78,
+    "tip": 18,
+    "eta": [
+      {
+        "day": 6,
+        "time": "17:57"
+      }
+    ],
+    "info": "Often comes here after work."
+  },
+  {
+    "id": "customer_030",
+    "name": "Francesco",
+    "surname": "Rossi",
+    "classId": 2,
+    "age": 58,
+    "likes": [
+      1,
+      3
+    ],
+    "patience": 62,
+    "tip": 10,
+    "eta": [
+      {
+        "day": 6,
+        "time": "17:38"
+      }
+    ],
+    "info": "Often comes here after work."
+  },
+  {
+    "id": "customer_031",
+    "name": "Anna",
+    "surname": "Bianchi",
+    "classId": 2,
+    "age": 36,
+    "likes": [
+      3
+    ],
+    "patience": 71,
+    "tip": 18,
+    "eta": [
+      {
+        "day": 2,
+        "time": "17:08"
+      },
+      {
+        "day": 5,
+        "time": "17:18"
+      }
+    ],
+    "info": "Often comes here after work."
+  },
+  {
+    "id": "customer_032",
+    "name": "Sara",
+    "surname": "Ferri",
+    "classId": 3,
+    "age": 26,
+    "likes": [
+      1,
+      2
+    ],
+    "patience": 45,
+    "tip": 13,
+    "eta": [
+      {
+        "day": 4,
+        "time": "16:45"
+      },
+      {
+        "day": 6,
+        "time": "11:30"
+      }
+    ],
+    "info": "Has very little free time in the morning."
+  },
+  {
+    "id": "customer_033",
+    "name": "Giulia",
+    "surname": "Esposito",
+    "classId": 6,
+    "age": 46,
+    "likes": [
+      1,
+      3
+    ],
+    "patience": 69,
+    "tip": 13,
+    "eta": [
+      {
+        "day": 7,
+        "time": "17:55"
+      }
+    ],
+    "info": "Likes discovering local cafes."
+  },
+  {
+    "id": "customer_034",
+    "name": "Elena",
+    "surname": "Moretti",
+    "classId": 1,
+    "age": 19,
+    "likes": [
+      1,
+      2
+    ],
+    "patience": 80,
+    "tip": 8,
+    "eta": [
+      {
+        "day": 2,
+        "time": "13:54"
+      }
+    ],
+    "info": "Usually comes here after classes."
+  },
+  {
+    "id": "customer_035",
+    "name": "Luca",
+    "surname": "Marino",
+    "classId": 3,
+    "age": 40,
+    "likes": [
+      1
+    ],
+    "patience": 20,
+    "tip": 14,
+    "eta": [
+      {
+        "day": 2,
+        "time": "09:06"
+      },
+      {
+        "day": 4,
+        "time": "17:52"
+      },
+      {
+        "day": 6,
+        "time": "11:45"
+      }
+    ],
+    "info": "Usually stops here on the way to work."
+  },
+  {
+    "id": "customer_036",
+    "name": "Matteo",
+    "surname": "Esposito",
+    "classId": 1,
+    "age": 20,
+    "likes": [
+      1,
+      4
+    ],
+    "patience": 87,
+    "tip": 8,
+    "eta": [
+      {
+        "day": 1,
+        "time": "17:42"
+      },
+      {
+        "day": 4,
+        "time": "17:31"
+      },
+      {
+        "day": 7,
+        "time": "09:21"
+      }
+    ],
+    "info": "Usually comes here after classes."
+  },
+  {
+    "id": "customer_037",
+    "name": "Giovanni",
+    "surname": "Verdi",
+    "classId": 2,
+    "age": 44,
+    "likes": [
+      3
+    ],
+    "patience": 52,
+    "tip": 19,
+    "eta": [
+      {
+        "day": 6,
+        "time": "11:16"
+      }
+    ],
+    "info": "Knows many people in the neighborhood."
+  },
+  {
+    "id": "customer_038",
+    "name": "Matteo",
+    "surname": "Romano",
+    "classId": 1,
+    "age": 28,
+    "likes": [
+      1
+    ],
+    "patience": 91,
+    "tip": 5,
+    "eta": [
+      {
+        "day": 1,
+        "time": "12:25"
+      },
+      {
+        "day": 4,
+        "time": "16:56"
+      },
+      {
+        "day": 6,
+        "time": "11:56"
+      }
+    ],
+    "info": "Usually comes here after classes."
+  },
+  {
+    "id": "customer_039",
+    "name": "Luca",
+    "surname": "Moretti",
+    "classId": 5,
+    "age": 61,
+    "likes": [
+      1
+    ],
+    "patience": 94,
+    "tip": 12,
+    "eta": [
+      {
+        "day": 2,
+        "time": "17:50"
+      }
+    ],
+    "info": "Often comes here to read the newspaper."
+  },
+  {
+    "id": "customer_040",
+    "name": "Francesco",
+    "surname": "Rossi",
+    "classId": 2,
+    "age": 56,
+    "likes": [
+      1,
+      3
+    ],
+    "patience": 67,
+    "tip": 11,
+    "eta": [
+      {
+        "day": 2,
+        "time": "13:44"
+      }
+    ],
+    "info": "Works in finance and often takes a short break here."
+  },
+  {
+    "id": "customer_041",
+    "name": "Elena",
+    "surname": "Gallo",
+    "classId": 1,
+    "age": 21,
+    "likes": [
+      1,
+      4
+    ],
+    "patience": 75,
+    "tip": 5,
+    "eta": [
+      {
+        "day": 4,
+        "time": "17:01"
+      },
+      {
+        "day": 5,
+        "time": "12:37"
+      },
+      {
+        "day": 7,
+        "time": "09:08"
+      }
+    ],
+    "info": "Likes having a quiet place to study."
+  },
+  {
+    "id": "customer_042",
+    "name": "Elena",
+    "surname": "Conti",
+    "classId": 2,
+    "age": 49,
+    "likes": [
+      1
+    ],
+    "patience": 76,
+    "tip": 11,
+    "eta": [
+      {
+        "day": 1,
+        "time": "13:04"
+      }
+    ],
+    "info": "Often comes here after work."
+  },
+  {
+    "id": "customer_043",
+    "name": "Elena",
+    "surname": "Verdi",
+    "classId": 2,
+    "age": 56,
+    "likes": [
+      3
+    ],
+    "patience": 62,
+    "tip": 20,
+    "eta": [
+      {
+        "day": 3,
+        "time": "17:56"
+      },
+      {
+        "day": 4,
+        "time": "17:05"
+      },
+      {
+        "day": 7,
+        "time": "17:35"
+      }
+    ],
+    "info": "Works in finance and often takes a short break here."
+  },
+  {
+    "id": "customer_044",
+    "name": "Matteo",
+    "surname": "Gallo",
+    "classId": 1,
+    "age": 18,
+    "likes": [
+      1,
+      4
+    ],
+    "patience": 79,
+    "tip": 9,
+    "eta": [
+      {
+        "day": 2,
+        "time": "09:06"
+      },
+      {
+        "day": 4,
+        "time": "17:54"
+      },
+      {
+        "day": 5,
+        "time": "09:38"
+      }
+    ],
+    "info": "Usually comes here after classes."
+  },
+  {
+    "id": "customer_045",
+    "name": "Giovanni",
+    "surname": "Moretti",
+    "classId": 1,
+    "age": 27,
+    "likes": [
+      1,
+      4
+    ],
+    "patience": 99,
+    "tip": 9,
+    "eta": [
+      {
+        "day": 5,
+        "time": "08:12"
+      }
+    ],
+    "info": "Likes having a quiet place to study."
+  },
+  {
+    "id": "customer_046",
+    "name": "Giulia",
+    "surname": "Verdi",
+    "classId": 3,
+    "age": 52,
+    "likes": [
+      1
+    ],
+    "patience": 41,
+    "tip": 10,
+    "eta": [
+      {
+        "day": 1,
+        "time": "17:15"
+      },
+      {
+        "day": 7,
+        "time": "17:39"
+      }
+    ],
+    "info": "Usually stops here on the way to work."
+  },
+  {
+    "id": "customer_047",
+    "name": "Sara",
+    "surname": "Esposito",
+    "classId": 3,
+    "age": 28,
+    "likes": [
+      1
+    ],
+    "patience": 20,
+    "tip": 10,
+    "eta": [
+      {
+        "day": 4,
+        "time": "17:24"
+      }
+    ],
+    "info": "Usually stops here on the way to work."
+  },
+  {
+    "id": "customer_048",
+    "name": "Alessandro",
+    "surname": "Gallo",
+    "classId": 1,
+    "age": 25,
+    "likes": [
+      1
+    ],
+    "patience": 77,
+    "tip": 6,
+    "eta": [
+      {
+        "day": 2,
+        "time": "17:09"
+      },
+      {
+        "day": 3,
+        "time": "09:47"
+      },
+      {
+        "day": 6,
+        "time": "17:51"
+      },
+      {
+        "day": 7,
+        "time": "10:09"
+      }
+    ],
+    "info": "Studies and often stays at the counter."
+  },
+  {
+    "id": "customer_049",
+    "name": "Elena",
+    "surname": "Ferri",
+    "classId": 1,
+    "age": 18,
+    "likes": [
+      1,
+      4
+    ],
+    "patience": 91,
+    "tip": 9,
+    "eta": [
+      {
+        "day": 2,
+        "time": "08:46"
+      },
+      {
+        "day": 7,
+        "time": "17:00"
+      }
+    ],
+    "info": "Usually comes here after classes."
+  },
+  {
+    "id": "customer_050",
+    "name": "Matteo",
+    "surname": "Rossi",
+    "classId": 1,
+    "age": 18,
+    "likes": [
+      1,
+      3,
+      4
+    ],
+    "patience": 76,
+    "tip": 6,
+    "eta": [
+      {
+        "day": 1,
+        "time": "12:04"
+      }
+    ],
+    "info": "Likes having a quiet place to study."
+  }
+],
+  "events": [
+  {
+    "chance": 0.04,
+    "title": "Lucky find",
+    "description": "You found $10 under the counter while cleaning.",
+    "money": 10
+  },
+  {
+    "chance": 0.03,
+    "title": "Broken glasses",
+    "description": "You found a box of broken glasses while closing.",
+    "money": -25
+  },
+  {
+    "chance": 0.03,
+    "title": "Cleaning fee",
+    "description": "Police found your cafè too dirty. You take a little fee",
+    "money": -25
+  },
+  {
+  "chance": 0.12,
+  "title": "Spilled coffee",
+  "description": "You knocked over a bag of coffee while cleaning.",
+  "money": -4
+},
+  {
+  "chance": 0.08,
+  "title": "Small leftover",
+  "description": "You found a few coins left in the cash drawer.",
+  "money": 3
+}
+],
+  "texts": {
+
+    "startPrompt": "Press Start cafe to begin.",
+
+    "dayStarted": "Day {day} started.",
+
+    "monthOver": "The month is over.",
+
+    "rentPaid": "Monthly rent paid.",
+
+    "rentFailed": "You could not pay the monthly rent.",
+
+    "endDayTitle": "End of Day {day}",
+
+    "dailyIncome": "Daily income:",
+
+    "dailyBill": "Daily bill:",
+
+    "movedToRent": "Moved to rent:",
+
+    "rentSaved": "Rent saved:",
+
+    "rentRequired": "Required:",
+
+    "cashKept": "Cash kept:",
+
+    "openCafe": "Open cafe",
+
+    "playAgain": "Play again",
+
+    "rules": {
+
+      "title": "How to play",
+
+      "intro": "You are the owner and only barista.",
+
+      "timeTitle": "Time",
+
+      "time": "Time only moves when you choose an action or use Wait. There is no real-time clock running in the background.",
+
+      "activitiesTitle": "Activities",
+
+      "activities": [
+        "Taking an order and offering a cupcake are instant.",
+        "Only one drink can be prepared at a time.",
+        "Only one conversation can happen at a time.",
+        "Only one table can be cleaned at a time.",
+        "Preparation or cleaning and conversation are two independent activities and can progress simultaneously.",
+        "Waiting advances the clock until the next relevant event or the shortest active task ends."
+      ],
+
+      "customersTitle": "Customers",
+
+      "customers": [
+        "Customers have individual schedules.",
+        "Daily arrival times shift randomly by ±{arrivalShift} minutes.",
+        "A customer may decide to order again after their first order.",
+        "A customer can order at most {maxOrders} times.",        
+        "A customer who completes all orders leaves once any conversation involving them has finished.",
+        "A customer who becomes too impatient leaves and friendship is reduced."
+      ],
+
+      "tablesTitle": "Tables",
+
+      "tables": "When a customer leaves, payment and tip are collected automatically. Their table becomes dirty. A dirty table still occupies its seat and must be cleaned before another customer can sit there.",
+
+      "friendshipTitle": "Friendship",
+
+      "friendship": "Higher friendship gradually reveals the customer's name, preferences, class, surname, age, patience, tip level and personal information.",
+      "satisfationTitle": "Satisfation and tips",
+      "satisfaction": "Satisfaction and tips are the main parameters to make you progress in the game. They are heavily influenced by your serving time and the quality of conversations you make with a customer (single or table chat). They are also influenced by the person's class type (e.g. a commuter loves to be served on time and dislikes participating in chats).",
+      "cupcakesTitle": "Cupcakes",
+      "cupcakes": "Cupcakes cost money to offer and are available in a limited daily quantity. Customers who like cupcakes receive a larger friendship and satisfaction bonus.",
+
+      "eventsTitle":"Random events",
+      "events": "At the end of each day, there may be a random event that slightly increases or decreases your income. Be prepared!",
+
+      "goalTitle": "Goal",
+
+      "goal": "Keep the cafe running, serve customers, maintain good relationships and save enough money to pay the monthly rent."
+    }
+  }
+}
