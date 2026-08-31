@@ -107,6 +107,7 @@ Customers can decide whether to place another order based on their characteristi
 
 Each customer has a maximum number of orders, preventing unlimited consumption and creating a natural lifecycle:
 
+```
 Arrival
   ↓
 First order
@@ -122,6 +123,7 @@ Final interaction
 Departure
   ↓
 Table becomes dirty
+```
 
 ### Friendship Progression
 
@@ -167,6 +169,7 @@ This creates a lightweight resource-allocation problem where the player must dec
 Tables have an explicit operational lifecycle.
 
 A seat can move through states such as:
+```
 Empty
   ↓
 Occupied
@@ -178,6 +181,7 @@ Empty and dirty
 Cleaning
   ↓
 Empty
+```
 
 A dirty seat remains unavailable until the player performs the cleaning action.
 
@@ -205,6 +209,7 @@ The player must therefore balance short-term customer service decisions with the
 
 The application can be conceptually divided into four layers:
 
+```
 Configuration
      ↓
 Simulation State
@@ -212,6 +217,7 @@ Simulation State
 Business Rules
      ↓
 UI Rendering
+```
 
 ### Configuration
 
@@ -219,15 +225,15 @@ JSON configuration defines the entities and parameters used by the simulation.
 
 This includes:
 
-Customers
-Customer classes
-Products
-Prices
-Action durations
-Schedules
-Gameplay rules
-Random events
-Text shown to the player
+- Customers
+- Customer classes
+- Products
+- Prices
+- Action durations
+- Schedules
+- Gameplay rules
+- Random events
+- Text shown to the player (<actions and logs)
 
 The goal is to keep business parameters separate from the simulation engine.
 
@@ -279,7 +285,7 @@ This allows the same simulation engine to operate against different datasets and
 ### Example Customer Model
 
 A customer can be represented using a compact, data-driven structure:
-
+```json
 {
   "id": "customer_001",
   "name": "Anna",
@@ -290,6 +296,7 @@ A customer can be represented using a compact, data-driven structure:
   "patience": 88,
   "tip": 7
 }
+```
 
 Behavioral characteristics are defined by the customer's class rather than being hard-coded into individual characters.
 
