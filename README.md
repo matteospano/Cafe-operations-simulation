@@ -284,18 +284,121 @@ This allows the same simulation engine to operate against different datasets and
 
 ### Example Customer Model
 
-A customer can be represented using a compact, data-driven structure:
+Customers can be represented using a compact, data-driven structure and 1-many relaltions to Products and Class tables:
+Customers:
 ```json
+  [{
+    "id": "customer_038",
+    "name": "Matteo",
+    "surname": "Romano",
+    "classId": 1,
+    "age": 28,
+    "likes": [
+      1, 3
+    ],
+    "patience": 91,
+    "tip": 5,
+    "eta": [
+      {
+        "day": 1,
+        "time": "17:25"
+      },
+      {
+        "day": 4,
+        "time": "16:56"
+      },
+      {
+        "day": 6,
+        "time": "11:56"
+      }
+    ],
+    "info": "Usually comes here after classes."
+},
 {
-  "id": "customer_001",
-  "name": "Anna",
-  "surname": "Bianchi",
-  "class": 1,
-  "age": 22,
-  "likes": [1, 3],
-  "patience": 88,
-  "tip": 7
-}
+    "id": "customer_039",
+    "name": "Luca",
+    "surname": "Moretti",
+    "classId": 5,
+    "age": 61,
+    "likes": [
+      1
+    ],
+    "patience": 94,
+    "tip": 12,
+    "eta": [
+      {
+        "day": 2,
+        "time": "7:50"
+      }
+    ],
+    "info": "Often comes here to read the newspaper."
+  }]
+```
+Products:
+```json
+  {
+    "1": {
+      "id": 1,
+      "name": "coffee",
+      "price": 3,
+      "prepTime": 3
+    },
+    "2": {
+      "id": 2,
+      "name": "sandwich",
+      "price": 7,
+      "prepTime": 8
+    },
+    "3": {
+      "id": 3,
+      "name": "cocktail",
+      "price": 9,
+      "prepTime": 6
+    },
+    "4": {
+      "id": 4,
+      "name": "cupcake",
+      "price": 1,
+      "prepTime": 0
+    }
+  }
+  
+```
+Customer classes (type of people):
+```json
+  {
+"1": {
+      "id": 1,
+      "name": "Student",
+      "nameStyle": 1,
+      "secondOrderChance": 0.65,
+      "secondOrderProduct": 1,
+      "served_in_time": 8,
+      "single_chat_bonus": 10,
+      "group_chat_bonus": 2
+    },
+    "2": {
+      "id": 2,
+      "name": "Banker",
+      "nameStyle": 2,
+      "secondOrderChance": 0.40,
+      "secondOrderProduct": 3,
+      "served_in_time": 18,
+      "single_chat_bonus": 10,
+      "group_chat_bonus": 5
+    },
+{...},
+    "5": {
+      "id": 5,
+      "name": "Retiree",
+      "nameStyle": 1,
+      "secondOrderChance": 0.45,
+      "secondOrderProduct": 1,
+      "served_in_time": 8,
+      "single_chat_bonus": 15,
+      "group_chat_bonus": 7
+    }
+  }
 ```
 
 Behavioral characteristics are defined by the customer's class rather than being hard-coded into individual characters.
