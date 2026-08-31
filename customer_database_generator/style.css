@@ -1,1 +1,177 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  padding: 20px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  background: #f4f1eb;
+  color: #222;
+}
+
+
+.generator {
+  width:
+    min(1100px, 100%);
+
+  margin:
+    auto;
+}
+
+
+header {
+  margin-bottom: 25px;
+}
+
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+
+header p {
+  margin: 0;
+  color: #777;
+}
+
+
+.settings,
+.preview {
+  background: #fff;
+
+  border: 1px solid #bbb;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+}
+
+
+h2 {
+  margin-top: 0;
+
+  margin-bottom: 15px;
+}
+
+
+.field {
+  margin-bottom: 20px;
+}
+
+
+.field label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-weight: bold;
+}
+
+
+input,
+textarea {
+  width: 100%;
+
+  padding: 9px;
+
+  border:
+    1px solid #aaa;
+
+  border-radius: 7px;
+
+  background: #fff;
+
+  font-family:
+    inherit;
+}
+
+
+textarea {
+  resize:
+    vertical;
+}
+
+
+small,
+.hint {
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+.peak-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    );
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+
+.peak-grid label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  font-weight: bold;
+}
+
+
+.actions {
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+
+button {
+  padding:
+    11px 16px;
+
+  border:
+    1px solid #888;
+
+  border-radius: 8px;
+
+  background: #fff;
+
+  cursor: pointer;
+}
+
+
+button:hover {
+  background: #eee;
+}
+
+
+#output {
+  min-height:
+    650px;
+
+  font-family:
+    Consolas,
+    monospace;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
