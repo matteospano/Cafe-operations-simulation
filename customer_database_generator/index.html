@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Café Sim - Customer Generator</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+<main class="generator">
+
+  <header>
+
+    <h1>Customer Generator</h1>
+
+    <p>
+      Generate a new customer database for Café Sim v1.6
+    </p>
+
+  </header>
+
+
+  <section class="settings">
+
+    <h2>Database</h2>
+
+
+    <div class="field">
+
+      <label for="customerCount">
+        Total customers
+      </label>
+
+      <input
+        id="customerCount"
+        type="number"
+        min="1"
+        max="1000"
+        value="50"
+      >
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="seed">
+        Seed
+      </label>
+
+      <input
+        id="seed"
+        type="text"
+        placeholder="Random"
+      >
+
+      <small>
+        Leave empty for a new random database.
+        Use the same seed to recreate the same database.
+      </small>
+
+    </div>
+
+
+    <h2>Names</h2>
+
+
+    <div class="field">
+
+      <label for="namesInput">
+        Available first names
+      </label>
+
+      <textarea
+        id="namesInput"
+        rows="4"
+      >Marco,Luca,Giovanni,Anna,Giulia,Francesco,Sara,Matteo,Alessandro,Elena</textarea>
+
+    </div>
+
+
+    <div class="field">
+
+      <label for="surnamesInput">
+        Available surnames
+      </label>
+
+      <textarea
+        id="surnamesInput"
+        rows="4"
+      >Rossi,Bianchi,Verdi,Ferri,Romano,Conti,Esposito,Moretti,Gallo,Marino</textarea>
+
+    </div>
+
+
+    <h2>Peak hours</h2>
+
+    <p class="hint">
+      Each customer can be assigned one or more visits
+      based on these daily windows.
+    </p>
+
+
+    <div class="peak-grid">
+
+      <label>
+        Monday
+        <input
+          class="peak"
+          data-day="1"
+          value="08-10,12-14,17-18"
+        >
+      </label>
+
+      <label>
+        Tuesday
+        <input
+          class="peak"
+          data-day="2"
+          value="08-10,12-14,17-18"
+        >
+      </label>
+
+      <label>
+        Wednesday
+        <input
+          class="peak"
+          data-day="3"
+          value="08-10,12-14,17-18"
+        >
+      </label>
+
+      <label>
+        Thursday
+        <input
+          class="peak"
+          data-day="4"
+          value="16-18"
+        >
+      </label>
+
+      <label>
+        Friday
+        <input
+          class="peak"
+          data-day="5"
+          value="08-10,12-14,17-18"
+        >
+      </label>
+
+      <label>
+        Saturday
+        <input
+          class="peak"
+          data-day="6"
+          value="9-12,17-18"
+        >
+      </label>
+
+      <label>
+        Sunday
+        <input
+          class="peak"
+          data-day="7"
+          value="9-12,17-18"
+        >
+      </label>
+
+    </div>
+
+
+    <h2>Generation</h2>
+
+    <div class="actions">
+
+      <button id="generateBtn">
+        Generate customers
+      </button>
+
+      <button id="copyBtn">
+        Copy JSON
+      </button>
+
+    </div>
+
+
+  </section>
+
+
+  <section class="preview">
+
+    <h2>Generated JSON</h2>
+
+    <textarea
+      id="output"
+      spellcheck="false"
+      readonly
+    ></textarea>
+
+  </section>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
