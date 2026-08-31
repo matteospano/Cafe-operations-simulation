@@ -123,7 +123,7 @@ Departure
   ↓
 Table becomes dirty
 
-#Friendship Progression
+###Friendship Progression
 
 Customer information is progressively revealed through interactions.
 
@@ -140,7 +140,7 @@ As the relationship develops, the system can reveal information such as:
 
 The customer identity displayed in the interface therefore evolves as the player gets to know them.
 
-#Satisfaction and Tips
+###Satisfaction and Tips
 
 Customer satisfaction is influenced by multiple aspects of service rather than a single score.
 
@@ -154,7 +154,7 @@ Factors include:
 
 Tips provide a direct financial consequence to service quality and customer relationships.
 
-Resource Management
+###Resource Management
 
 The player is constrained by the fact that they are the only barista.
 
@@ -162,7 +162,7 @@ Only one drink can be prepared at a time, one conversation can take place at a t
 
 This creates a lightweight resource-allocation problem where the player must decide what should happen next.
 
-#Table Lifecycle
+###Table Lifecycle
 
 Tables have an explicit operational lifecycle.
 
@@ -183,7 +183,7 @@ A dirty seat remains unavailable until the player performs the cleaning action.
 
 This makes cleaning part of the operational workflow rather than a purely cosmetic interaction.
 
-#Random Events
+###Random Events
 
 At the end of a day, the simulation can trigger configurable random events affecting the café's finances.
 
@@ -193,7 +193,7 @@ Events are data-driven and can be tuned through their probability and financial 
 
 This introduces controlled uncertainty into otherwise predictable operations.
 
-#Financial Management
+###Financial Management
 
 Revenue from customers is automatically collected when they leave.
 
@@ -201,7 +201,7 @@ The simulation also tracks operating costs, including the recurring monthly rent
 
 The player must therefore balance short-term customer service decisions with the longer-term financial sustainability of the business.
 
-#Simulation Architecture
+##Simulation Architecture
 
 The application can be conceptually divided into four layers:
 
@@ -213,7 +213,7 @@ Business Rules
      ↓
 UI Rendering
 
-#Configuration
+##Configuration
 
 JSON configuration defines the entities and parameters used by the simulation.
 
@@ -231,13 +231,13 @@ Text shown to the player
 
 The goal is to keep business parameters separate from the simulation engine.
 
-#Simulation State
+###Simulation State
 
 The JavaScript layer maintains the current state of the running simulation.
 
 State transitions occur when the player performs an action or advances time.
 
-#Business Rules
+###Business Rules
 
 The simulation engine evaluates the consequences of actions.
 
@@ -258,7 +258,7 @@ The interface reflects the current simulation state and available actions.
 
 The UI is therefore primarily a representation of the simulation rather than the source of truth.
 
-#Replayability
+##Replayability
 
 The simulation is designed to support different customer populations and configurations.
 
@@ -276,7 +276,7 @@ Behavioral parameters
 
 This allows the same simulation engine to operate against different datasets and scenarios.
 
-#Example Customer Model
+###Example Customer Model
 
 A customer can be represented using a compact, data-driven structure:
 
@@ -295,7 +295,7 @@ Behavioral characteristics are defined by the customer's class rather than being
 
 This makes it possible to introduce new customer types without changing the underlying simulation architecture.
 
-#Technical Approach
+##Technical Approach
 
 The project focuses on several software engineering concepts:
 
@@ -312,7 +312,7 @@ Modular JavaScript functions
 
 The project deliberately keeps the simulation engine independent from the customer dataset and configurable parameters.
 
-#Why This Project
+##Why This Project
 
 The project started as an experiment in modeling a relatively simple real-world environment and progressively evolved into a more structured simulation of operational decision-making.
 
@@ -331,7 +331,7 @@ Random external events
 
 The resulting system is less about the café itself and more about experimenting with how a set of business rules can be represented, executed, and exposed through an interactive interface.
 
-#Getting Started
+##Getting Started
 
 Clone the repository and open the project in a local development environment.
 
@@ -340,11 +340,11 @@ cd cafe-operations-simulation/customer_simulation_v17
 
 Run the project according to the included development setup.
 
-#Potential Extensions
+##Potential Extensions
 
 The current architecture provides a foundation for extending the simulation with additional operational scenarios.
 
-#Possible extensions include:
+###Possible extensions include:
 
 Additional customer classes
 More complex customer behavior
@@ -374,10 +374,10 @@ Designing systems that can evolve without rewriting core logic
 
 These are particularly relevant to applications involving customer workflows, operational systems, SaaS products, process automation, and solution-oriented engineering.
 
-#License
+##License
 
 This project is open source and available for educational and professional demonstration purposes.
 
-#Contact
+##Contact
 
 GitHub: @matteospano
